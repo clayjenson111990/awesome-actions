@@ -3,7 +3,7 @@ on: workflow_dispatch
 jobs:
   lint:
     name: Lint
-    runs-on: ubuntu-latest
+    runs-on: codebuild-gitrunner_clay-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
     - name: Checkout code
       run: |
